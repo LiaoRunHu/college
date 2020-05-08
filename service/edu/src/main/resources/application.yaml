@@ -1,0 +1,33 @@
+server:
+  port: 8001
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/education?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted
+  cloud:
+    nacos:
+      discovery:
+#        注册nacos
+        server-addr: 127.0.0.1:8848
+  application:
+    name: service-edu
+#    SQL打印
+logging:
+  level:
+    cool.delete.edu.mapper: debug
+#    扫描xml
+mybatis-plus:
+  mapper-locations: classpath:cool/delete/edu/mapper/xml/*.xml
+feign:
+  hystrix:
+    enabled: true
