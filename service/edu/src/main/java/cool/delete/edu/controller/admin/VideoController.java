@@ -1,4 +1,4 @@
-package cool.delete.edu.controller;
+package cool.delete.edu.controller.admin;
 
 
 import cool.delete.commonutils.Result;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 2020-05-06
  */
 @RestController
-@RequestMapping("/edu/video")
+@RequestMapping("/edu/admin/video")
 @CrossOrigin
 public class VideoController {
     @Autowired

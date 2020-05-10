@@ -17,16 +17,29 @@ spring:
   cloud:
     nacos:
       discovery:
-        #        注册nacos
+        #注册nacos
         server-addr: 127.0.0.1:8848
   application:
     name: service-cms
-#    SQL打印
+  #redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+#SQL打印
 logging:
   level:
     cool.delete.edu.mapper: debug
-#    扫描xml
+#扫描xml
 mybatis-plus:
   mapper-locations: classpath:cool/delete/cms/mapper/xml/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

@@ -1,4 +1,4 @@
-package cool.delete.edu.controller;
+package cool.delete.edu.controller.admin;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -26,7 +26,7 @@ import java.util.List;
  * @since 2020-05-06
  */
 @RestController
-@RequestMapping("/edu/course")
+@RequestMapping("/edu/admin/course")
 @CrossOrigin
 public class CourseController {
 

@@ -1,4 +1,4 @@
-package cool.delete.edu.controller;
+package cool.delete.edu.controller.admin;
 
 import cool.delete.commonutils.Result;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,7 +16,7 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping("edu/user")
+@RequestMapping("edu/admin/user")
 @CrossOrigin
 public class LoginController {
 

@@ -1,4 +1,4 @@
-package cool.delete.edu.controller;
+package cool.delete.edu.controller.admin;
 
 
 import cool.delete.commonutils.Result;
@@ -20,7 +20,7 @@ import java.util.List;
  * @since 2020-05-05
  */
 @RestController
-@RequestMapping("/edu/subject")
+@RequestMapping("/edu/admin/subject")
 @CrossOrigin
 public class SubjectController {
     @Autowired

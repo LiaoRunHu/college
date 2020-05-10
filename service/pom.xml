@@ -17,6 +17,8 @@
         <module>vod</module>
         <module>vod</module>
         <module>cms</module>
+        <module>sms</module>
+        <module>user</module>
     </modules>
 
     <dependencies>

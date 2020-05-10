@@ -1,4 +1,4 @@
-package cool.delete.edu.controller;
+package cool.delete.edu.controller.admin;
 
 
 import cool.delete.commonutils.Result;
@@ -20,7 +20,7 @@ import java.util.List;
  * @since 2020-05-06
  */
 @RestController
-@RequestMapping("/edu/chapter")
+@RequestMapping("/edu/admin/chapter")
 @CrossOrigin
 public class ChapterController {
 
