@@ -1,9 +1,14 @@
 package cool.delete.edu.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import cool.delete.edu.entity.Course;
 import com.baomidou.mybatisplus.extension.service.IService;
+import cool.delete.edu.entity.vo.CourseFrontVo;
 import cool.delete.edu.entity.vo.CoursePublishVo;
 import cool.delete.edu.entity.vo.CourseVo;
+import cool.delete.edu.entity.vo.CourseWebVo;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -48,4 +53,19 @@ public interface CourseService extends IService<Course> {
      * @return
      */
     boolean removeCourse(String id);
+
+    /**
+     * 根据条件分页查询课程
+     * @param coursePage
+     * @param courseFrontVo
+     * @return
+     */
+    Map<String, Object> getCourseList(Page<Course> coursePage, CourseFrontVo courseFrontVo);
+
+    /**
+     * 课程详情类Vo
+     * @param id
+     * @return
+     */
+    CourseWebVo getBaseCourseInfo(long id);
 }

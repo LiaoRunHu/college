@@ -37,6 +37,7 @@ public class IndexFrontController {
         QueryWrapper<Course> courseQueryWrapper=new QueryWrapper<>();
 
         courseQueryWrapper.orderByDesc("gmt_modified");
+        courseQueryWrapper.eq("status","Normal");
         courseQueryWrapper.last("limit 8");
         List<Course> courseList = courseService.list(courseQueryWrapper);
 

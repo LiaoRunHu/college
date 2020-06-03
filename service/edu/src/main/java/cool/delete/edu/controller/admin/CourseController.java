@@ -26,7 +26,7 @@ import java.util.List;
  * @since 2020-05-06
  */
 @RestController
-@RequestMapping("/edu/admin/course")
+@RequestMapping("/admin/edu/course")
 @CrossOrigin
 public class CourseController {
 
@@ -35,6 +35,7 @@ public class CourseController {
 
     @Autowired
     TeacherService teacherService;
+
     @PostMapping
     public Result addCourseInfo(@RequestBody CourseVo courseVo) {
         String id = courseService.addCourseInfo(courseVo);
@@ -68,11 +69,13 @@ public class CourseController {
         courseService.updateById(course);
         return Result.ok();
     }
+
     @DeleteMapping("{id}")
     public Result deleteCourse(@PathVariable String id) {
         courseService.removeCourse(id);
         return Result.ok();
     }
+
     @GetMapping("Search/page={page}&limit={limit}")
     public Result pageTeacherCondition(@PathVariable long page, @PathVariable long limit, CourseQuery courseQuery) {
         Page<Course> coursePage = new Page<>(page, limit);
@@ -97,7 +100,7 @@ public class CourseController {
         if (StringUtils.isNotBlank(title)) {
             wrapper.like("title", title);
         }
-        if (StringUtils.isNotBlank(status)){
+        if (StringUtils.isNotBlank(status)) {
             wrapper.eq("status", status);
         }
         if (StringUtils.isNotBlank(oneLevelId)) {
@@ -119,11 +122,11 @@ public class CourseController {
         courseService.page(coursePage, wrapper);
 
         coursePage.getRecords().forEach(course -> {
-            if(StringUtils.isNotBlank(course.getTeacherId())){
+            if (StringUtils.isNotBlank(course.getTeacherId())) {
                 Teacher teacher = teacherService.getById(course.getTeacherId());
                 if (teacher != null) {
                     course.setTeacherId(teacher.getName());
-                }else {
+                } else {
                     course.setTeacherId("");
                 }
             }

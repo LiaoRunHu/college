@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8006
 spring:
   profiles:
     active: dev
@@ -17,16 +17,26 @@ spring:
   cloud:
     nacos:
       discovery:
-#        注册nacos
+        #注册nacos
         server-addr: 127.0.0.1:8848
   application:
-    name: service-edu
-#    SQL打印
+    name: service-user
+  #redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+#SQL打印
 logging:
   level:
-    cool.delete.edu.mapper: debug
-feign:
-  hystrix:
-    enabled: true
-mybatis-plus:
-  mapper-locations: classpath:cool/delete/edu/mapper/xml/*.xml
+    cool.delete.user.mapper: debug
+password:
+  salt: "www.delete.cool**hgyut098245_!!@"
+

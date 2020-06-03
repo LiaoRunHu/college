@@ -16,7 +16,7 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping("edu/admin/user")
+@RequestMapping("/admin/edu/user/")
 @CrossOrigin
 public class LoginController {
 

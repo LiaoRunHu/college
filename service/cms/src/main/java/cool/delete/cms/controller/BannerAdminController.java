@@ -18,7 +18,7 @@ import java.util.List;
  * @create 2020-05-09 0:18
  */
 @RestController
-@RequestMapping("/cms/admin/banner")
+@RequestMapping("/admin/cms/banner")
 @CrossOrigin
 public class BannerAdminController {
 
