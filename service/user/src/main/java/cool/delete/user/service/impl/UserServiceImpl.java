@@ -37,7 +37,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      */
     @Override
     public String login(User user) {
-
         String mobile = user.getMobile();
         String password = user.getPassword();
         if (StringUtils.isBlank(mobile) || StringUtils.isBlank(password)) {
@@ -102,5 +101,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setPassword(registerVo.getPassword());
         user.setAvatar("https://file-online.oss-cn-shenzhen.aliyuncs.com/default_avatar.jpg");
         baseMapper.insert(user);
+    }
+
+    /**
+     * 统计注册人数
+     *
+     * @param day
+     * @return
+     */
+    @Override
+    public int countRegister(String day) {
+        return baseMapper.countRegister(day);
     }
 }

@@ -18,9 +18,9 @@ import java.util.List;
 @FeignClient(value = "service-vod",fallback = VodFileDegradeFeignClient.class)
 @Component
 public interface VodClient {
-    @DeleteMapping("/edu/vod/{id}")
+    @DeleteMapping("vod/{id}")
     Result deleteVideoById(@PathVariable("id") String id);
 
-    @DeleteMapping("/edu/vod/batch")
+    @DeleteMapping("vod/batch")
     Result deleteVideos(@RequestParam("videoIdList") List<String> videoIdList);
 }

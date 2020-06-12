@@ -21,7 +21,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("sms")
-@CrossOrigin
 public class SmsController {
 
     @Autowired

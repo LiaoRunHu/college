@@ -180,7 +180,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         }if (StringUtils.isNotBlank(courseFrontVo.getPriceSort())){
             courseQueryWrapper.orderByDesc("price");
         }
-
+        courseQueryWrapper.eq("status","Normal");
         baseMapper.selectPage(coursePage,courseQueryWrapper);
         //把分页数据获取出来，放到map集合里面
         Map<String,Object> map= new HashMap<>(16);
@@ -209,7 +209,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
      * @return
      */
     @Override
-    public CourseWebVo getBaseCourseInfo(long id) {
-        return baseMapper.getBaseCourseInfo(Long.toString(id));
+    public CourseWebVo getBaseCourseInfo(String id) {
+        return baseMapper.getBaseCourseInfo(id);
     }
 }

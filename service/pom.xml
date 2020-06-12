@@ -19,6 +19,8 @@
         <module>cms</module>
         <module>sms</module>
         <module>user</module>
+        <module>order</module>
+        <module>statistics</module>
     </modules>
 
     <dependencies>

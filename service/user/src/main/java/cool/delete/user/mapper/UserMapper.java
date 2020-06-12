@@ -13,4 +13,10 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface UserMapper extends BaseMapper<User> {
 
+    /**
+     * 查询某天注册人数
+     * @param day
+     * @return
+     */
+    int countRegister(String day);
 }

@@ -39,4 +39,5 @@ logging:
     cool.delete.user.mapper: debug
 password:
   salt: "www.delete.cool**hgyut098245_!!@"
-
+mybatis-plus:
+  mapper-locations: classpath:cool/delete/user/mapper/xml/*.xml

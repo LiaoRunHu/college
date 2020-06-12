@@ -19,8 +19,7 @@ import java.util.List;
  * @since 2020-05-06
  */
 @RestController
-@RequestMapping("/admin/edu/chapter")
-@CrossOrigin
+@RequestMapping("/edu/admin/chapter")
 public class ChapterController {
 
     @Autowired

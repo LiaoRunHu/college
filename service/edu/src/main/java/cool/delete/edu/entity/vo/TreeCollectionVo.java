@@ -19,10 +19,17 @@ public class TreeCollectionVo {
     private String id;
     private String title;
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    String videoSourceId;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     List<TreeCollectionVo> children;
 
     public TreeCollectionVo(String id, String label) {
         this.id = id;
         this.title = label;
+    }
+    public TreeCollectionVo(String id, String label,String videoSourceId) {
+        this.id = id;
+        this.title = label;
+        this.videoSourceId=videoSourceId;
     }
 }

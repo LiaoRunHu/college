@@ -26,4 +26,11 @@ public interface UserService extends IService<User> {
      * @param registerVo
      */
     void register(RegisterVo registerVo);
+
+    /**
+     * 统计注册人数
+     * @param day
+     * @return
+     */
+    int countRegister(String day);
 }

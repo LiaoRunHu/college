@@ -25,7 +25,7 @@ public class CodeGenerator {
 
         // 2、全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("E:\\IdeaProjects\\college-parent\\service\\edu" + "/src/main/java");
+        gc.setOutputDir("E:\\IdeaProjects\\college-parent\\service\\order" + "/src/main/java");
 
         gc.setAuthor("Tiger");
         gc.setOpen(false); //生成后是否打开资源管理器
@@ -51,8 +51,7 @@ public class CodeGenerator {
 
         // 4、包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("edu"); //模块名
-        //包  com.atguigu.eduservice
+        pc.setModuleName("order"); //模块名
         pc.setParent("cool.delete");
         //包  com.atguigu.eduservice.controller
         pc.setController("controller");
@@ -64,10 +63,10 @@ public class CodeGenerator {
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
-        strategy.setInclude("edu_course","edu_chapter","edu_comment","edu_course_collect","edu_course_description","edu_video");
+        strategy.setInclude("t_order","t_pay_log");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
-        strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
+        strategy.setTablePrefix("t_"); //生成实体时去掉表前缀
 
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);//数据库表字段映射到实体的命名策略
         strategy.setEntityLombokModel(true); // lombok 模型 @Accessors(chain = true) setter链式操作

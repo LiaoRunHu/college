@@ -1,6 +1,5 @@
 import com.aliyun.vod.upload.impl.UploadVideoImpl;
 import com.aliyun.vod.upload.req.UploadVideoRequest;
-import com.aliyun.vod.upload.req.VoDUploadFileRequest;
 import com.aliyun.vod.upload.resp.UploadVideoResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.exceptions.ClientException;
@@ -44,7 +43,7 @@ public class VodTest {
     }
     public static void getPlayAuth() throws ClientException {
         //获取视频凭证
-        DefaultAcsClient client = InitTest.initVodClient("LTAI4GDFMvtdUaz83mqxwmPY", "ScsX7jkzXB2onZOkcwYnCbLq7PSbPm");
+        DefaultAcsClient client = InitVod.initVodClient("LTAI4GDFMvtdUaz83mqxwmPY", "ScsX7jkzXB2onZOkcwYnCbLq7PSbPm");
         GetVideoPlayAuthRequest request=new GetVideoPlayAuthRequest();
         GetVideoPlayAuthResponse response=new GetVideoPlayAuthResponse();
         request.setVideoId("4743826c19744a8a9a22d08a91c2d2f3");
@@ -55,7 +54,7 @@ public class VodTest {
     public static void getPlayUrl() throws ClientException {
         //1.根据视频ID初始化对象
         //创建初始对象
-        DefaultAcsClient client = InitTest.initVodClient("LTAI4GDFMvtdUaz83mqxwmPY", "ScsX7jkzXB2onZOkcwYnCbLq7PSbPm");
+        DefaultAcsClient client = InitVod.initVodClient("LTAI4GDFMvtdUaz83mqxwmPY", "ScsX7jkzXB2onZOkcwYnCbLq7PSbPm");
         //创建获取视频地址的response和request对象
         GetPlayInfoResponse response = new GetPlayInfoResponse();
         GetPlayInfoRequest request=new GetPlayInfoRequest();

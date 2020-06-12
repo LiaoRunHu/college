@@ -1,0 +1,44 @@
+server:
+  port: 7777
+spring:
+  cloud:
+    gateway:
+      enabled: true
+      routes:
+        - id: SERVICE-EDU
+          uri: lb://service-edu
+          predicates:
+            - Path=/edu/**
+        - id: SERVICE-OSS
+          uri: lb://service-oss
+          predicates:
+            - Path=/oss/**
+        - id: SERVICE-ORDER
+          uri: lb://service-order
+          predicates:
+            - Path=/order/**
+        - id: SERVICE-CMS
+          uri: lb://service-cms
+          predicates:
+            - Path=/cms/**
+        - id: SERVICE-VOD
+          uri: lb://service-vod
+          predicates:
+            - Path=/vod/**
+        - id: SERVICE-USER
+          uri: lb://service-user
+          predicates:
+            - Path=/user/**
+        - id: SERVICE-STATISTICS
+          uri: lb://service-statistics
+          predicates:
+            - Path=/statistics/**
+        - id: SERVICE-SMS
+          uri: lb://service-sms
+          predicates:
+            - Path=/sms/**
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: service-gateway

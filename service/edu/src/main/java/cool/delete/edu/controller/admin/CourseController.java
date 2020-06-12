@@ -26,8 +26,7 @@ import java.util.List;
  * @since 2020-05-06
  */
 @RestController
-@RequestMapping("/admin/edu/course")
-@CrossOrigin
+@RequestMapping("/edu/admin/course")
 public class CourseController {
 
     @Autowired

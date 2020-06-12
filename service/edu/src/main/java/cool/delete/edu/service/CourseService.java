@@ -67,5 +67,5 @@ public interface CourseService extends IService<Course> {
      * @param id
      * @return
      */
-    CourseWebVo getBaseCourseInfo(long id);
+    CourseWebVo getBaseCourseInfo(String id);
 }

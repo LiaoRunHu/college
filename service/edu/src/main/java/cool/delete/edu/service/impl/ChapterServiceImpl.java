@@ -58,7 +58,7 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
             List<Video> videoList = videoService.list(videoQueryWrapper);
 
             videoList.forEach(video -> {
-                childrenList.add(new TreeCollectionVo(video.getId(), video.getTitle()));
+                childrenList.add(new TreeCollectionVo(video.getId(), video.getTitle(),video.getVideoSourceId()));
             });
             children.setId(chapter.getId());
             children.setTitle(chapter.getTitle());

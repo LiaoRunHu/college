@@ -20,8 +20,7 @@ import java.util.List;
  * @since 2020-05-05
  */
 @RestController
-@RequestMapping("/admin/edu/subject")
-@CrossOrigin
+@RequestMapping("/edu/admin/subject")
 public class SubjectController {
     @Autowired
     SubjectService subjectService;

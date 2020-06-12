@@ -15,8 +15,7 @@ import java.io.IOException;
  * @create 2020-05-04 22:17
  */
 @RestController
-@RequestMapping("/edu/oss")
-@CrossOrigin
+@RequestMapping("/oss")
 public class OssController {
 
     @Autowired

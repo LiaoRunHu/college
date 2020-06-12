@@ -36,7 +36,7 @@ spring:
 #SQL打印
 logging:
   level:
-    cool.delete.edu.mapper: debug
+    cool.delete.cms.mapper: debug
 #扫描xml
 mybatis-plus:
   mapper-locations: classpath:cool/delete/cms/mapper/xml/*.xml

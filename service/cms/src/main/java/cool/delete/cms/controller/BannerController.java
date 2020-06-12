@@ -23,7 +23,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/cms/banner")
-@CrossOrigin
 public class BannerController {
     @Autowired
     BannerService bannerService;
