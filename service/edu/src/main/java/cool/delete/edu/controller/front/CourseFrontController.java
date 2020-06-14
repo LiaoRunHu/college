@@ -52,8 +52,11 @@ public class CourseFrontController {
         if (userId == null) {
             return Result.ok().data("courseWebVo",courseWebVo).data("chapterList",list).data("isBuy",false);
         }
-        boolean isBuy = orderClient.isBuyCourse(id, userId);
-        return Result.ok().data("courseWebVo",courseWebVo).data("chapterList",list).data("isBuy",isBuy);
+        /**
+         * 这个方法 是调的order这个项目的方法 去掉就少查了一个order
+         */
+        //boolean isBuy = orderClient.isBuyCourse(id, userId);.data("isBuy",isBuy)
+        return Result.ok().data("courseWebVo",courseWebVo).data("chapterList",list);
     }
     @GetMapping("order/{id}")
     public CourseOrderVo getCourseOrderVoById(@PathVariable String id){

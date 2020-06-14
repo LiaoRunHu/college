@@ -5,7 +5,7 @@ spring:
     active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/education?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://139.196.36.157:3306/education?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
   jackson:
@@ -19,6 +19,7 @@ spring:
       discovery:
 #        注册nacos
         server-addr: 127.0.0.1:8848
+
   application:
     name: service-edu
 #    SQL打印
@@ -28,5 +29,14 @@ logging:
 feign:
   hystrix:
     enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+      isolation:
+        thread:
+          timeoutInMilliseconds: 8000
 mybatis-plus:
   mapper-locations: classpath:cool/delete/edu/mapper/xml/*.xml

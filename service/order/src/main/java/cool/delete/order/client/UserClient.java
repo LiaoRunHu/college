@@ -15,5 +15,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient("service-user")
 public interface UserClient {
     @GetMapping("/user/{id}")
-    public UserOrderVo getUserInfoById(@PathVariable("id") String id);
+    UserOrderVo getUserInfoById(@PathVariable("id") String id);
 }

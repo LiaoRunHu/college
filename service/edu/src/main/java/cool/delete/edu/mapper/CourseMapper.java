@@ -4,7 +4,6 @@ import cool.delete.edu.entity.Course;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import cool.delete.edu.entity.vo.CoursePublishVo;
 import cool.delete.edu.entity.vo.CourseWebVo;
-import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
