@@ -1,13 +1,13 @@
 server:
-  port: 8008
+  port: 39006
 spring:
   profiles:
     active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/education?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://101.133.171.225:9841/education?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: wys&dxf_mysql!
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -18,7 +18,7 @@ spring:
     nacos:
       discovery:
 #        注册nacos
-        server-addr: 127.0.0.1:8848
+        server-addr: 101.133.171.225:9703
   application:
     name: service-statistics
 #    SQL打印

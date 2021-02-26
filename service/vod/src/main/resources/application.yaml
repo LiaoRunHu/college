@@ -1,5 +1,5 @@
 server:
-  port: 8003
+  port: 39008
 spring:
   profiles:
     active: dev
@@ -12,7 +12,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 101.133.171.225:9703
 aliyun:
   AccessKey:
     AccessKeyID: LTAI4GDFMvtdUaz83mqxwmPY

@@ -1,5 +1,5 @@
 server:
-  port: 8005
+  port: 39005
 spring:
   profiles:
     active: dev
@@ -7,13 +7,13 @@ spring:
     nacos:
       discovery:
         #注册nacos
-        server-addr: 127.0.0.1:8848
+        server-addr: 101.133.171.225:9703
   application:
     name: service-sms
   #redis
   redis:
-    host: 127.0.0.1
-    port: 6379
+    host: 101.133.171.225
+    port: 9702
     database: 0
     timeout: 1800000
     lettuce:
@@ -22,6 +22,7 @@ spring:
         max-wait: -1
         max-idle: 5
         min-idle: 0
+    password: wys&dxf_mysql!
 #SQL打印
 logging:
   level:
