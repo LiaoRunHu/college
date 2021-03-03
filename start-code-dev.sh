@@ -42,7 +42,7 @@ docker build -t aofeng/oss .
 sudo mv $proj_home/service/sms/target/sms-*.jar $proj_home/service/sms/target/demo.jar # 兼容所有sh脚本
 docker build -t aofeng/sms .
 
-sudo mv $proj_home/service/statistics/target/statistics-*.jar $proj_home/service/statistics/target/target/demo.jar # 兼容所有sh脚本
+sudo mv $proj_home/service/statistics/target/statistics-*.jar $proj_home/service/statistics/target/demo.jar # 兼容所有sh脚本
 docker build -t aofeng/statistics .
 
 sudo mv $proj_home/service/user/target/user-*.jar $proj_home/service/user/target/demo.jar # 兼容所有sh脚本
