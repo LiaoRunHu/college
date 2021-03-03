@@ -9,10 +9,16 @@ proj_home=$PWD                              # the project root dir
 git pull  # should use git clone https://name:pwd@xxx.git
 
 echo "use docker maven"
+
 docker run --rm \
    -v $m2_cache:/root/.m2 \
    -v $proj_home:/usr/src/mymaven \
-   -w /usr/src/mymaven $img_mvn mvn clean compile package -U -Pdev -Dmaven.test.skip=true
+   -w /usr/src/mymaven $img_mvn mvn clean  compile  -U -Pdev -Dmaven.test.skip=true
+
+docker run --rm \
+   -v $m2_cache:/root/.m2 \
+   -v $proj_home:/usr/src/mymaven \
+   -w /usr/src/mymaven $img_mvn mvn package -U -Pdev -Dmaven.test.skip=true
 
 echo "mv jar start"
 sudo mv $proj_home/common/service_base/target/service_base-*.jar $proj_home/common/service_base/target/demo.jar # 兼容所有sh脚本
