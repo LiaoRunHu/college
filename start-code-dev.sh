@@ -63,179 +63,179 @@ version=`date "+%Y%m%d%H"`
 
 echo "docker run start"
 # 启动镜像
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name collage-common aofeng/common \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx100m \
-        -Xms100m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name collage-api-gateway aofeng/api-gateway \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-cms aofeng/cms \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-edu aofeng/edu \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-order aofeng/order \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-oss aofeng/oss \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-sms aofeng/sms \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-statistics aofeng/statistics \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-user aofeng/user \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
-
-
-
-docker run -d --restart=on-failure:5 --privileged=true \
-    --net=host \
-    -w /home \
-    -v $PWD/logs:/home/logs \
-    --name college-vod aofeng/vod \
-    java \
-        -Djava.security.egd=file:/dev/./urandom \
-        -Duser.timezone=Asia/Shanghai \
-        -XX:+PrintGCDateStamps \
-        -XX:+PrintGCTimeStamps \
-        -XX:+PrintGCDetails \
-        -XX:+HeapDumpOnOutOfMemoryError \
-        -Xmx200m \
-        -Xms200m \
-        -Xloggc:logs/gc_$version.log \
-        -jar /home/demo.jar
+#docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name collage-common aofeng/common \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx100m \
+##        -Xms100m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name collage-api-gateway aofeng/api-gateway \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-cms aofeng/cms \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-edu aofeng/edu \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-order aofeng/order \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-oss aofeng/oss \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-sms aofeng/sms \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-statistics aofeng/statistics \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-user aofeng/user \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
+##
+##
+##
+##docker run -d --restart=on-failure:5 --privileged=true \
+##    --net=host \
+##    -w /home \
+##    -v $PWD/logs:/home/logs \
+##    --name college-vod aofeng/vod \
+##    java \
+##        -Djava.security.egd=file:/dev/./urandom \
+##        -Duser.timezone=Asia/Shanghai \
+##        -XX:+PrintGCDateStamps \
+##        -XX:+PrintGCTimeStamps \
+##        -XX:+PrintGCDetails \
+##        -XX:+HeapDumpOnOutOfMemoryError \
+##        -Xmx200m \
+##        -Xms200m \
+##        -Xloggc:logs/gc_$version.log \
+##        -jar /home/demo.jar
