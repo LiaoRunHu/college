@@ -7,16 +7,15 @@ ENV LANG en_US.UTF-8
 
 USER root
 
-cd ~
-COPY /college/common/service_base/target/demo.jar /home/common_base/
-COPY /college/infrastructure/api_gateway/target/demo.jar /home/api_gateway/
-COPY /college/service/cms/demo.jar /home/cms/
-COPY /college/service/edu/demo.jar /home/edu/
-COPY /college/service/order/demo.jar /home/order/
-COPY /college/service/oss/demo.jar /home/oss/
-COPY /college/service/sms/demo.jar /home/sms/
-COPY /college/service/statistics/demo.jar /home/statistics/
-COPY /college/service/user/demo.jar /home/user/
-COPY /college/service/vod/demo.jar /home/vod/
+COPY /root/college/common/service_base/target/demo.jar /home/common_base/
+COPY /root/college/infrastructure/api_gateway/target/demo.jar /home/api_gateway/
+COPY /root/college/service/cms/demo.jar /home/cms/
+COPY /root/college/service/edu/demo.jar /home/edu/
+COPY /root/college/service/order/demo.jar /home/order/
+COPY /root/college/service/oss/demo.jar /home/oss/
+COPY /root/college/service/sms/demo.jar /home/sms/
+COPY /root/college/service/statistics/demo.jar /home/statistics/
+COPY /root/college/service/user/demo.jar /home/user/
+COPY /root/college/service/vod/demo.jar /home/vod/
 
 WORKDIR /home/
