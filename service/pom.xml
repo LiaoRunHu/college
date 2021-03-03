@@ -11,10 +11,10 @@
 
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>edu</module>
         <module>oss</module>
-        <module>vod</module>
         <module>vod</module>
         <module>cms</module>
         <module>sms</module>
