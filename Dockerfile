@@ -7,5 +7,15 @@ ENV LANG en_US.UTF-8
 
 USER root
 
-COPY college-parent/target/demo.jar /home/
+COPY common/common_base/target/demo.jar /home/
+COPY infrastructure/api_gateway/target/demo.jar /home/
+COPY service/cms/demo.jar /home/
+COPY service/edu/demo.jar /home/
+COPY service/order/demo.jar /home/
+COPY service/oss/demo.jar /home/
+COPY service/sms/demo.jar /home/
+COPY service/statistics/demo.jar /home/
+COPY service/user/demo.jar /home/
+COPY service/vod/demo.jar /home/
+
 WORKDIR /home/

@@ -56,7 +56,7 @@ chmod 777 $PWD/logs
 
 echo "docker rm start"
 # 删除容器
-docker rm -f college-parent &> /dev/null
+docker rm -f college &> /dev/null
 
 version=`date "+%Y%m%d%H"`
 
