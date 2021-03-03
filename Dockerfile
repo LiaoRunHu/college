@@ -7,15 +7,16 @@ ENV LANG en_US.UTF-8
 
 USER root
 
-COPY /home/project/college/common/service_base/target/demo.jar /home/common_base/
-COPY /home/project/college/infrastructure/api_gateway/target/demo.jar /home/api_gateway/
-COPY /home/project/college/service/cms/demo.jar /home/cms/
-COPY /home/project/college/service/edu/demo.jar /home/edu/
-COPY /home/project/college/service/order/demo.jar /home/order/
-COPY /home/project/college/service/oss/demo.jar /home/oss/
-COPY /home/project/college/service/sms/demo.jar /home/sms/
-COPY /home/project/college/service/statistics/demo.jar /home/statistics/
-COPY /home/project/college/service/user/demo.jar /home/user/
-COPY /home/project/college/service/vod/demo.jar /home/vod/
+cd ~
+COPY /college/common/service_base/target/demo.jar /home/common_base/
+COPY /college/infrastructure/api_gateway/target/demo.jar /home/api_gateway/
+COPY /college/service/cms/demo.jar /home/cms/
+COPY /college/service/edu/demo.jar /home/edu/
+COPY /college/service/order/demo.jar /home/order/
+COPY /college/service/oss/demo.jar /home/oss/
+COPY /college/service/sms/demo.jar /home/sms/
+COPY /college/service/statistics/demo.jar /home/statistics/
+COPY /college/service/user/demo.jar /home/user/
+COPY /college/service/vod/demo.jar /home/vod/
 
 WORKDIR /home/
