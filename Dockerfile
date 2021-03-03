@@ -7,7 +7,7 @@ ENV LANG en_US.UTF-8
 
 USER root
 
-COPY /home/project/college/common/common_base/target/demo.jar /home/common_base/
+COPY /home/project/college/common/service_base/target/demo.jar /home/common_base/
 COPY /home/project/college/infrastructure/api_gateway/target/demo.jar /home/api_gateway/
 COPY /home/project/college/service/cms/demo.jar /home/cms/
 COPY /home/project/college/service/edu/demo.jar /home/edu/
